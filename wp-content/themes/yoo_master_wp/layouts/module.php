@@ -23,6 +23,7 @@ foreach (array('suffix', 'style', 'color', 'badge', 'icon', 'dropdownwidth') as 
 
 // set default module types
 if ($style == '') {
+	if ($module->position == 'top-content') $style = 'box';
 	if ($module->position == 'top-a') $style = 'box';
 	if ($module->position == 'top-b') $style = 'box';
 	if ($module->position == 'top-c') $style = 'box';

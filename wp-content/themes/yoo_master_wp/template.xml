@@ -19,6 +19,7 @@
 		<position settings="display">toolbar-r</position>
 		<position settings="display">headerbar</position>
 		<position settings="display">breadcrumbs</position>
+		<position>top-content</position>
 		<position>top-a</position>
 		<position>top-b</position>
 		<position>top-c</position>

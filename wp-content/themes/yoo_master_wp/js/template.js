@@ -27,6 +27,7 @@
 		valid: function() {
 			$.matchWidth('grid-block', '.grid-block', '.grid-h').match();
 			$.matchHeight('main', '#maininner, #sidebar-a, #sidebar-b').match();
+			$.matchHeight('top-content', '#top-content .grid-h', '.deepest').match();
 			$.matchHeight('top-a', '#top-a .grid-h', '.deepest').match();
 			$.matchHeight('top-b', '#top-b .grid-h', '.deepest').match();
 			$.matchHeight('top-c', '#top-c .grid-h', '.deepest').match();
@@ -38,6 +39,7 @@
 		invalid: function() {
 			$.matchWidth('grid-block').remove();
 			$.matchHeight('main').remove();
+			$.matchHeight('top-content').remove();
 			$.matchHeight('top-a').remove();
 			$.matchHeight('top-b').remove();
 			$.matchHeight('top-c').remove();
@@ -54,7 +56,7 @@
 		valid: function() {
 			$.matchHeight('sidebars', '.sidebars-2 #sidebar-a, .sidebars-2 #sidebar-b').match();
 			pairs = [];
-			$.each(['.sidebars-1 #sidebar-a > .grid-box', '.sidebars-1 #sidebar-b > .grid-box', '#top-a .grid-h', '#top-b .grid-h', '#top-c .grid-h', '#bottom-a .grid-h', '#bottom-b .grid-h', '#innertop .grid-h', '#innerbottom .grid-h'], function(i, selector) {
+			$.each(['.sidebars-1 #sidebar-a > .grid-box', '.sidebars-1 #sidebar-b > .grid-box', '#top-a .grid-h', '#top-b .grid-h', '#top-c .grid-h', '#top-content .grid-h', '#bottom-a .grid-h', '#bottom-b .grid-h', '#innertop .grid-h', '#innerbottom .grid-h'], function(i, selector) {
 				for (var i = 0, elms = $(selector), len = parseInt(elms.length / 2); i < len; i++) {
 					var id = 'pair-' + pairs.length;
 					$.matchHeight(id, [elms.get(i * 2), elms.get(i * 2 + 1)], '.deepest').match();

@@ -108,6 +108,10 @@ include($this['path']->path('layouts:template.config.php'));
 				<section id="breadcrumbs"><?php echo $this['modules']->render('breadcrumbs'); ?></section>
 				<?php endif; ?>
 
+				<?php if ($this['modules']->count('top-content')) : ?>
+				<section id="top-content"><?php echo $this['modules']->render('top-content'); ?></section>
+				<?php endif; ?>
+
 				<?php if ($this['config']->get('system_output')) : ?>
 				<section id="content" class="grid-block"><?php echo $this['template']->render('content'); ?></section>
 				<?php endif; ?>

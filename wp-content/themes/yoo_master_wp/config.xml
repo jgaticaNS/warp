@@ -142,6 +142,7 @@
 			<option value="right">Right</option>
 			<option value="left">Left</option>
 		</field>
+		<field name="top-content" type="layout" default="equal" label="Top Content Layout" description="Select a grid layout for this module position." />
 		<field name="top-a" type="layout" default="equal" label="Top A Layout" description="Select a grid layout for this module position." />
 		<field name="top-b" type="layout" default="equal" label="Top B Layout" description="Select a grid layout for this module position." />
 		<field name="top-c" type="layout" default="equal" label="Top C Layout" description="Select a grid layout for this module position." />
